@@ -20,16 +20,16 @@ The domain I used was, professore reviews from students. The descriptions includ
 
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 |professor1.txt |Student Review created for Professor Sam's BIO100.|docuements/professor1.txt|
+| 2 |professo21.txt  |Student Review created for Professor Sam's BIO100. | |
+| 3 |professor3.txt  |Student Review created for Professor Amanda's CHEM100. | |
+| 4 |professor4.txt  |Student Review created for Professor Brandon's AI100. | |
+| 5 |professor5.txt  |Student Review created for Professor Bradley's CSC100. | |
+| 6 |professo61.txt  |Student Review created for Professor Maggie's FIN300. | |
+| 7 |rate my professor |A real review from a student on rate my professor about Professor Shi's CSC211. |https://www.ratemyprofessors.com/professor/2498365 |
+| 8 |professor8.txt  |Student Review created for Professor Ryan's CSC200.| |
+| 9 |rate my professor |A real review from a student on rate my professor fro Professor Richard Curry's COM100.|https://www.ratemyprofessors.com/professor/2425272 |
+| 10 |professor10.txt  |Student Review created for Professor Denis's A1400. | |
 
 ---
 
