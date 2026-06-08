@@ -10,7 +10,7 @@
 ## Domain
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
-
+The domain I used was, professore reviews from students. The descriptions include a teacher's names with the course they teach then the exam difficulty, grading fairness, and course workload.
 ---
 
 ## Documents
@@ -41,9 +41,9 @@
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
 **Chunk size:**
-
+300 characters
 **Overlap:**
-
+50 characters
 **Reasoning:**
 
 ---
