@@ -41,9 +41,9 @@ The domain I used was, professore reviews from students. The descriptions includ
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
 **Chunk size:**
-300 characters
+125 characters
 **Overlap:**
-50 characters
+25 characters
 **Reasoning:**
 My documents are short reviews, not long text documents. A 300 charcater chunk should keep related information together, such as offic hours, etc. A 50 character overlap prevents information from being split between chunks.
 
