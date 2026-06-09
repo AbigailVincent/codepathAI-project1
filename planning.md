@@ -45,8 +45,7 @@ The domain I used was, professore reviews from students. The descriptions includ
 **Overlap:**
 50 characters
 **Reasoning:**
-
----
+My documents are short reviews, not long text documents. A 300 charcater chunk should keep related information together, such as offic hours, etc. A 50 character overlap prevents information from being split between chunks.
 
 ## Retrieval Approach
 
@@ -56,12 +55,12 @@ The domain I used was, professore reviews from students. The descriptions includ
      would you weigh in choosing a different embedding model — context length, multilingual
      support, accuracy on domain-specific text, latency? -->
 
-**Embedding model:**
+**Embedding model:** all-MiniLM-L6-v2 via sentence-transformers
 
-**Top-k:**
+**Top-k:**4
 
 **Production tradeoff reflection:**
-
+For this project all0MiniLM-L6-v2 is my choice becuase it's free and runs locally.
 ---
 
 ## Evaluation Plan
@@ -73,11 +72,11 @@ The domain I used was, professore reviews from students. The descriptions includ
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 |Which professors have difficult exams? |Professor Amanda and Bradley have difficult exams.|
+| 2 |Which professors are helpful or easy to contact during office hours? |Professor Denis, Maggie, Bradley, Amanda, and Sam are helpful or easy to contact.|
+| 3 |Which professors are considered fair graders? |Professor Sam is reviewed to be a fair grader. |
+| 4 |Which courses have diffcult homework? |Professor Sam has diffcult homework. |
+| 5 |Which professor has light or fun or easy or summarized lectures?|Professor Bradley, Maggie, Ryan, and Denis. |
 
 ---
 
@@ -87,9 +86,9 @@ The domain I used was, professore reviews from students. The descriptions includ
      Consider: noisy or inconsistent documents, missing source attribution, off-topic
      retrieval, chunks that split key information across boundaries. -->
 
-1.
+1. The wording of each review varies, I used a lot of synonyms.
 
-2.
+2.Missing attributes
 
 ---
 
@@ -102,6 +101,7 @@ The domain I used was, professore reviews from students. The descriptions includ
      You'll use this diagram as context when prompting AI tools to implement each stage. -->
 
 ---
+Documents->Document ingestion, file reading->Chunking/Cleaning-> Embedding using sentence-transformers->vector store->retrieval of top 4 chunks for user question->generation-> grounded answer with source citation
 
 ## AI Tool Plan
 
@@ -115,8 +115,12 @@ The domain I used was, professore reviews from students. The descriptions includ
      "I'll give Claude my Chunking Strategy section and ask it to implement chunk_text()
      with my specified chunk size and overlap" is a plan. -->
 
+
 **Milestone 3 — Ingestion and chunking:**
+I will use Claude to help me understand how to plan my python code, that cleans extra white space, splits text into 300 character chunks with 50 character overlap. 
 
 **Milestone 4 — Embedding and retrieval:**
+I will use AI to help connect a sentence transformers with ChromeDB. I will provide the retrieval approach, embedding model, and top k-value to Claude and recieve an implementation for retrieval of top 4 chunks for question.
 
 **Milestone 5 — Generation and interface:**
+I will use Claude to help me verify and implement a grounded prompt for Groq that answers only from retrived chunks. 
