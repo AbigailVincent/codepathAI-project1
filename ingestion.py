@@ -1,31 +1,73 @@
- python ingestion.py
-Loaded 10 documents
-Created 44 chunks
+from pathlib import Path
+import re
 
-Sample chunks:
---------------------
-Source: professor1.txt
-Chunk number: 0
-Professor Sam teaches BIO101.
+DOCUMENTS_FOLDER = "documents"
 
---------------------
-Source: professor1.txt
-Chunk number: 1
-Students often report difficult and lengthy homework .
 
---------------------
-Source: professor1.txt
-Chunk number: 2
-Many students mention that the syllabus is straight foward so the grading is fair.
+def clean_text(text):
+    text = text.replace("\r\n", "\n")
+    text = re.sub(r"\n\s*\n", "\n\n", text)
+    text = re.sub(r"[ \t]+", " ", text)
+    return text.strip()
 
---------------------
-Source: professor1.txt
-Chunk number: 3
-The students that attended office hours described it as useful and it helped them prepare for exams
 
---------------------
-Source: professor10.txt
-Chunk number: 0
-Professor Denis teaches AI400.
+def load_documents(folder_path):
+    documents = []
+    folder = Path(folder_path)
 
-PS C:\Users\abiga\OneDrive\Documents>
+    for file_path in folder.glob("*.txt"):
+        raw_text = file_path.read_text(encoding="utf-8")
+        cleaned_text = clean_text(raw_text)
+
+        documents.append({
+            "source": file_path.name,
+            "text": cleaned_text
+        })
+
+    return documents
+
+
+def chunk_text(text):
+    chunks = []
+    paragraphs = text.split("\n")
+
+    for paragraph in paragraphs:
+        paragraph = paragraph.strip()
+
+        if paragraph != "":
+            chunks.append(paragraph)
+
+    return chunks
+
+
+def create_chunks(documents):
+    all_chunks = []
+
+    for document in documents:
+        chunks = chunk_text(document["text"])
+
+        for i, chunk in enumerate(chunks):
+            all_chunks.append({
+                "source": document["source"],
+                "chunk_number": i,
+                "text": chunk
+            })
+
+    return all_chunks
+
+
+if __name__ == "__main__":
+    documents = load_documents(DOCUMENTS_FOLDER)
+    chunks = create_chunks(documents)
+
+    print(f"Loaded {len(documents)} documents")
+    print(f"Created {len(chunks)} chunks")
+    print()
+
+    print("Sample chunks:")
+    for chunk in chunks[:5]:
+        print("--------------------")
+        print(f"Source: {chunk['source']}")
+        print(f"Chunk number: {chunk['chunk_number']}")
+        print(chunk["text"])
+        print()
