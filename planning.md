@@ -73,10 +73,10 @@ For this project all0MiniLM-L6-v2 is my choice becuase it's free and runs locall
 | # | Question | Expected answer |
 |---|----------|-----------------|
 | 1 |Which professors have difficult exams? |Professor Bradley have difficult exams.|
-| 2 |Which professors are helpful or easy to contact after office hours? |Professor Denis, Maggie, and Brandon.|
+| 2 |Which professors are helpful or easy to contact after office hours? |Professor Amanda, Sam, Denis, Maggie, and Brandon.|
 | 3 |Which professors are considered fair graders? |Professor Sam and Brandon are reviewed to be a fair grader. |
 | 4 |Which courses have difficult homework? |Professor Sam has diffcult homework. |
-| 5 |Which professor has light or fun or easy or summarized lectures?|Professor Maggie, Ryan, and Denis. |
+| 5 |Which professor has light or fun or easy or summarized lectures?|Professor Maggie, Bradley Ryan, and Denis. |
 
 ---
 
