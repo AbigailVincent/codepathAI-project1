@@ -14,7 +14,7 @@
      Example: "Student reviews of CS professors at [university] — useful because official
      course descriptions don't reflect teaching style, exam difficulty, or workload." -->
 
----
+Students reviews of professors across multiple departments. This knowledge is valueable because it captures real, experience-based information, with important factors included. Some factors these reviews include are exam difficulty, amount of homework, usefulness of office hours. Students have always made these reviews either by word of mouth, online posts, and other platforms so it made it hard to search for systematically. 
 
 ## Document Sources
 
@@ -24,16 +24,16 @@
 
 | # | Source | Type | URL or file path |
 |---|--------|------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 |professor_Sam.txt |review |/document/professor_Sam |
+| 2 |professor_Megan.txt |review |/documentprofessor_Megan.txt|
+| 3 |professor_Amanda.txt |review |/document/professor_Amanda.txt |
+| 4 |professor_Brandon.txt |review |/document/professor_Brandon.txt |
+| 5 |professor_Bradley.txt |review |/document/professor_Bradley.txt |
+| 6 |professor_Maggie.txt |review |/document/professor_Maggie.txt |
+| 7 |professor_Shi.txt |review ||
+| 8 |professor_Ryan.txt |review |/document/professor_Ryan.txt|
+| 9 |professor_Curry.txt |review ||
+| 10 |professor_Denis.txt |review |/document/professor_Denis.txt|
 
 ---
 
@@ -47,11 +47,12 @@
      - What your final chunk count was across all documents -->
 
 **Chunk size:**
-
+ Each line/paragraph is kept as its own chunk (approximately 50–150 characters).
 **Overlap:**
+None — documents are short enough that each sentence stands alone.
 
 **Why these choices fit your documents:**
-
+Reasoning: The source documents are short student reviews, typically 3–5 sentences each. Each sentence covers a distinct topic (exams, homework, office hours, lectures). Keeping sentences as individual chunks.
 **Final chunk count:**
 
 ---
