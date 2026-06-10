@@ -30,9 +30,9 @@ Students reviews of professors across multiple departments. This knowledge is va
 | 4 |professor_Brandon.txt |review |/document/professor_Brandon.txt |
 | 5 |professor_Bradley.txt |review |/document/professor_Bradley.txt |
 | 6 |professor_Maggie.txt |review |/document/professor_Maggie.txt |
-| 7 |professor_Shi.txt |review ||
+| 7 |professor_Shi.txt |review |https://www.ratemyprofessors.com/professor/2498365|
 | 8 |professor_Ryan.txt |review |/document/professor_Ryan.txt|
-| 9 |professor_Curry.txt |review ||
+| 9 |professor_Curry.txt |review |https://www.ratemyprofessors.com/professor/2425272|
 | 10 |professor_Denis.txt |review |/document/professor_Denis.txt|
 
 ---
@@ -107,7 +107,7 @@ After the LLM generates its answer, the source filenames are collected directly 
 | 2 |Which professors are helpful or easy to contact during office hours? |Professors Denis, Maggie, Brandon,Sam, Amanda  |Returned Brandon, Denis, Maggie — missed Sam and Amanda |partially |partially accurate |
 | 3 |Which professors are considered fair graders? |Profesors Sam and Brandon |Returned Sam and Brandon |Relevant |Accurate |
 | 4 |Which courses have difficult homework? | Professor Sam |Returned Sam as rank 1 with the correct chunk about difficult homework |relevant |accurate |
-| 5 |Professors Bradley, Ryan,Denis, Maggie | Maggie, Ryan, DenisReturned Ryan, Maggie, Denis, and Bradley |relevant | |accurate |
+| 5 |Which professor has light or fun or easy or summarized lectures? | Maggie, Ryan, Denis |Returned Ryan, Maggie, Denis, and Bradley |relevant | |accurate |
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
